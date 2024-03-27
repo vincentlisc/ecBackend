@@ -1,0 +1,118 @@
+###get all restaurant
+GET http://localhost:5500/restaurants
+###
+
+### register restaurant
+Post http://localhost:5500/Restaurants/register
+
+content-type: application/json
+
+{
+  "name": "starbucks2",
+  "location": "Scarborough2",
+  "photo": "restImg3.jpg",
+  "rating": "4",
+  "cuisine": "Coffee shop",
+  "price": "$",
+  "description": "offering fresh-roasted coffee beans, tea and spices from around the wo…",
+  "closing": 20,
+  "opening": 12,
+  "phone": 2424242424,
+  "email" :"test@gmail.com"
+}
+
+### get restaurant by id
+Get http://localhost:5500/Restaurants/65cbdda1e140698bfe3702a1
+###
+
+### get all reservation by adminId
+Get http://localhost:5500/Reservation/Admin/65fe5880159eaafa26378e88
+###
+
+
+### update restaurant information
+POST http://localhost:5500/Restaurants/:id/update
+###
+
+### Delete restaurant
+DELETE http://localhost:5500/Restaurants/:id/delete
+###
+
+### Get Diner
+GET  http://localhost:5500/Diner
+
+###
+
+### Get Diner by ID
+GET  http://localhost:5500/Diner/65d38fc4eb637c510ec07e75
+###
+
+### Get User by ID2
+GET  http://localhost:5500/User/65eb6079b82acdbc4694972f
+###
+
+
+### Diner Login
+Post http://localhost:5500/diner/login
+content-type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "password"
+}
+
+### User Login
+Post http://localhost:5500/User/login
+content-type: application/json
+
+{
+  "email": "test@gmail.com",
+  "password": "password"
+}
+
+
+
+### register restaurant
+Post http://localhost:5500/Reservation/register
+content-type: application/json
+
+{
+  "id": "65cbdcf6e140698bfe3702a0",
+  "Date": "2023-12-25",
+  "Time": "12:00",
+  "People": "5",
+  "Menu1": "Steak",
+  "Menu2": "Steak",
+  "Menu3": "",
+  "Menu4": ""
+}
+
+
+### register restaurant2
+Post http://localhost:5500/Reservation/register
+content-type: application/json
+
+{
+    "id": "65cbdcf6e140698bfe3702a0",
+  "Date": "2023-12-25",
+  "Time": "12:00",
+  "People": "5",
+  "MenuSelection": "Salmon"
+}
+
+
+### find reservatrion for user
+get http://localhost:5500/Reservation/find
+content-type: application/json
+
+{
+  "id": "65cbdda1e140698bfe3702a1",
+  "userId": "65eb6079b82acdbc4694972f"
+}
+
+### find all reservatrion
+get http://localhost:5500/Reservation
+
+
+### find reservatrion by user ID
+get http://localhost:5500/Reservation/65eb6079b82acdbc4694972f
